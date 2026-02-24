@@ -36,7 +36,7 @@
 - 不在对话中记住密码
 
 ## OpenSpec（如使用）
-- 新功能/改接口/改表结构：必须先 Proposal，经批准后再 Apply
-- 上线后 Archive，并执行 `openspec validate --strict --no-interactive`
-- 常用命令：`openspec list`、`openspec show <id>`、`openspec validate <id>`
-- OpenCode 命令：`/openspec-proposal`、`/openspec-apply`、`/openspec-archive`
+- 新功能/改接口/改表结构：先创建变更与产物（`/opsx-ff` 或 `/opsx-new` + `/opsx-continue`），再 Apply
+- 上线前先执行 `/opsx-verify <id>`，通过后再 `/opsx-archive <id>`
+- 常用命令：`openspec list --json`、`openspec status --change <id> --json`、`openspec instructions apply --change <id> --json`
+- OpenCode 命令：`/opsx-ff`、`/opsx-apply`、`/opsx-verify`、`/opsx-archive`

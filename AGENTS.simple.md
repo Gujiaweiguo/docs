@@ -14,5 +14,5 @@
 - 未明确要求不提交；不使用 --amend
 
 ## OpenSpec（如使用）
-- 新功能/改接口/改表结构：先 Proposal，经批准后 Apply
-- 上线后 Archive，并执行 `openspec validate --strict --no-interactive`
+- 新功能/改接口/改表结构：先创建变更与产物（`/opsx-ff`），再 Apply
+- 上线前先执行 `/opsx-verify <id>`，通过后再 `/opsx-archive <id>`

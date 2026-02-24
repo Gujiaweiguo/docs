@@ -38,10 +38,10 @@
 - 可能破坏性或联网命令需先确认
 
 ## OpenSpec 流程（如果使用）
-- 新功能/改接口/改表结构：必须先 Proposal，经批准后再 Apply
-- 上线后 Archive，并执行 `openspec validate --strict --no-interactive`
-- 常用命令：`openspec list`、`openspec show <id>`、`openspec validate <id>`
-- OpenCode 命令：`/openspec-proposal`、`/openspec-apply`、`/openspec-archive`
+- 新功能/改接口/改表结构：先创建变更与产物（`/opsx-ff` 或 `/opsx-new` + `/opsx-continue`），再 Apply
+- 上线前先执行 `/opsx-verify <id>`，通过后再 `/opsx-archive <id>`
+- 常用命令：`openspec list --json`、`openspec status --change <id> --json`、`openspec instructions apply --change <id> --json`
+- OpenCode 命令：`/opsx-ff`、`/opsx-apply`、`/opsx-verify`、`/opsx-archive`
 
 ## OpenSpec 结构与最佳实践（可选，按仓库实际调整）
 - 目录布局：建议使用 `openspec/`，并在 `openspec/AGENTS.md` 写明规则
@@ -51,4 +51,4 @@
 - delta specs 建议格式：
   - `## ADDED|MODIFIED|REMOVED|RENAMED Requirements`
   - 至少包含一个 `#### Scenario:`
-- 提交/共享前验证：`openspec validate <id> --strict --no-interactive`
+- 提交/共享前验证：`/opsx-verify <id>`
