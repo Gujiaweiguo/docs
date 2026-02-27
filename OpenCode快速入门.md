@@ -95,3 +95,4 @@ opencode
 - 执行导向：`OpenCode实战手册.md`
 - 测试导向：`OpenCode测试手册.md`
 - 缺陷导向：`OpenCodeBUG修复手册.md`
+- 模型选择：`模型场景速查表.md`
