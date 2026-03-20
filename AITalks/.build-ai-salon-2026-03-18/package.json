@@ -1,0 +1,10 @@
+{
+  "name": "ai-talk-salon-2026-03-18",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PptxGenJS source for the AI salon talk deck",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}
